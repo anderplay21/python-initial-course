@@ -1,0 +1,7 @@
+[project]
+name = "hola-mundo"
+version = "1.0.0"
+description = "Hola mundo por consola"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
