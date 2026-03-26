@@ -11,3 +11,12 @@ frutas.append("naranja")
 
 for fruta in frutas:
     print(fruta)
+
+motos: list[str]=[]
+motos.append("susuki")
+motos.append("kawasaki")
+motos.append("ktm")
+motos.append("yamaha")
+
+for moto in motos:
+    print("Esta es la marca de la moto:", moto) 

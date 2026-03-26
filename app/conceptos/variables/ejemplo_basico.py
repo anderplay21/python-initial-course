@@ -1,9 +1,9 @@
 # Ejemplo basico de variables
 
 # Una variable guarda un valor.
-nombre = "Ana"
-edad = 20
-altura = 1.65
+nombre = "Anderson Guzman"
+edad = 24
+altura = 1.72
 es_estudiante = True
 
 print("Nombre:", nombre)
@@ -12,5 +12,5 @@ print("Altura:", altura)
 print("Es estudiante:", es_estudiante)
 
 # Puedes cambiar el valor de una variable.
-edad = 21
+edad = 25
 print("Nueva edad:", edad)

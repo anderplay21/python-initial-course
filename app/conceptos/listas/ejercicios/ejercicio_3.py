@@ -13,3 +13,8 @@ for numero in numeros:
 
 promedio = suma / len(numeros)
 print("Promedio:", promedio)
+
+print(numeros)
+
+for numero in numeros:
+    print("el numero es igual a: ",numero )

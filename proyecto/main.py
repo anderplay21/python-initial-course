@@ -2,7 +2,7 @@ from __future__ import annotations
 
 
 def mostrar_menu() -> None:
-    # TODO: Imprime el menu con las opciones.
+    TODO: #Imprime el menu con las opciones.
     print("1. Agregar tarea")
     print("2. Ver tareas")
     print("3. Completar tarea")
@@ -10,19 +10,21 @@ def mostrar_menu() -> None:
 
 
 def agregar_tarea(tareas: list[str]) -> None:
-    # TODO: Pide un texto al usuario y agregalo a la lista.
-    # Reglas: no permitas texto vacio.
-    print("TODO: Implementar agregar_tarea")
+    texto = input("Escribe la tarea: ").strip()
+    if not texto:
+        print("La tarea no puede estar vacia.")
+        return
+    tareas.append(texto)
 
 
 def ver_tareas(tareas: list[str]) -> None:
-    # TODO: Muestra todas las tareas con numero.
+    TODO: #Muestra todas las tareas con numero.
     # Si no hay tareas, muestra "No hay tareas."
     print("TODO: Implementar ver_tareas")
 
 
 def completar_tarea(tareas: list[str]) -> None:
-    # TODO: Pide el numero de la tarea a completar y validalo.
+    TODO: #Pide el numero de la tarea a completar y validalo.
     # Si el numero existe, elimina la tarea de la lista.
     print("TODO: Implementar completar_tarea")
 
