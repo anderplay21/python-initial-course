@@ -2,7 +2,7 @@ from __future__ import annotations
 
 
 def mostrar_menu() -> None:
-    TODO: #Imprime el menu con las opciones.
+    #Imprime el menu con las opciones.
     print("1. Agregar tarea")
     print("2. Ver tareas")
     print("3. Completar tarea")
@@ -10,23 +10,44 @@ def mostrar_menu() -> None:
 
 
 def agregar_tarea(tareas: list[str]) -> None:
-    texto = input("Escribe la tarea: ").strip()
-    if not texto:
+    while True:
+        tarea = input("Ingresa tu nueva tarea: ").strip()
+        if tarea:
+            tareas.append(tarea)
+            break
         print("La tarea no puede estar vacia.")
-        return
-    tareas.append(texto)
+    print("TAREA AGREGADA")
 
 
 def ver_tareas(tareas: list[str]) -> None:
-    TODO: #Muestra todas las tareas con numero.
-    # Si no hay tareas, muestra "No hay tareas."
-    print("TODO: Implementar ver_tareas")
+    if not tareas:
+        print("No hay tareas.")
+        return
+
+    for numero, tarea in enumerate(tareas, start=1):
+        print(f"{numero}. {tarea}")
+    
 
 
 def completar_tarea(tareas: list[str]) -> None:
-    TODO: #Pide el numero de la tarea a completar y validalo.
-    # Si el numero existe, elimina la tarea de la lista.
-    print("TODO: Implementar completar_tarea")
+    if not tareas:
+        print("No hay tareas.")
+        return
+
+    ver_tareas(tareas)
+    while True:
+        numero_tarea = input("Ingresa el numero de la tarea a completar: ").strip()
+        if not numero_tarea.isdigit():
+            print("Ingresa un numero valido.")
+            continue
+
+        indice = int(numero_tarea) - 1
+        if 0 <= indice < len(tareas):
+            tareas.pop(indice)
+            print("TAREA COMPLETADA")
+            break
+
+        print("Numero de tarea invalido.")
 
 
 def main() -> None:
